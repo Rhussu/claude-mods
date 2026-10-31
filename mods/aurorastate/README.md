@@ -19,6 +19,36 @@
   <img src="assets/preview.png" alt="aurorastate while Claude works, and while it waits for you, in English and Spanish" width="100%">
 </p>
 
+## 🚀 Install
+
+1. Open Claude Code and type:
+
+   ```
+   /plugin install aurorastate --marketplace Rhussu/claude-mods
+   ```
+
+2. Claude Code asks **Add marketplace?** and shows `github:Rhussu/claude-mods`. Check that it is this repository, then answer `y`.
+3. Pick a scope:
+   - **user**: the mod is on in every project;
+   - **project**: only in the current project.
+
+The line appears right away. The first time, a short notice explains what the mod reads:
+
+```
+✦ aurorastate is on · reads usage, model, effort & git status · no network, no file writes · Ctrl+X Ctrl+A hides it
+```
+
+Prefer a shell? `claude plugin install aurorastate --marketplace Rhussu/claude-mods` (add `--config language=es` for Spanish).
+
+| | Command |
+|---|---|
+| 🔄 Update | `claude plugin update aurorastate@rhussu-mods` |
+| ⚙️ Change options | `/plugin configure aurorastate@rhussu-mods` |
+| 🗑️ Uninstall | `claude plugin uninstall aurorastate@rhussu-mods` |
+
+> [!WARNING]
+> A mod runs inside Claude Code **with your user's permissions**. Read [🔒 Security at a glance](#-security-at-a-glance) and [🔍 What it uses](#-what-it-uses) before installing.
+
 ## ✨ Features
 
 | | |
@@ -44,20 +74,6 @@ Bars fade from mint to pink as they fill, so you can read how full they are from
 | ⚙️ | **Runs two read-only git commands**: `git rev-parse` and `git status`. |
 | 👁️ | **Reads** usage figures, the model name, the effort level, two Claude Code settings and `$LANG`. |
 | 👋 | **Says so the first time it runs**: a one-time notice explains what it reads and how to hide it. |
-
-## 🚀 Install
-
-```
-/plugin install aurorastate --marketplace Rhussu/claude-mods
-```
-
-Answer `y` to add the marketplace, then pick a scope. See the [main README](../../README.md#-install) for updating and uninstalling.
-
-The first time it runs, it shows a short notice:
-
-```
-✦ aurorastate is on · reads usage, model, effort & git status · no network, no file writes · Ctrl+X Ctrl+A hides it
-```
 
 ## 🌐 Language
 

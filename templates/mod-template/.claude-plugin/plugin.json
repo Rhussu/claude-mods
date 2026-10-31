@@ -1,0 +1,19 @@
+{
+  "name": "mod-template",
+  "version": "0.1.0",
+  "description": "One line, in English, saying what the mod does",
+  "author": { "name": "Rhussu", "url": "https://github.com/Rhussu" },
+  "license": "MIT",
+  "repository": "https://github.com/Rhussu/claude-mods",
+  "homepage": "https://github.com/Rhussu/claude-mods/tree/main/mods/mod-template",
+  "keywords": [],
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language / Idioma",
+      "description": "auto follows Claude Code's language setting, then $LANG; en = English; es = Español",
+      "default": "auto",
+      "options": ["auto", "en", "es"]
+    }
+  }
+}
