@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="claude-mods: unofficial mods for Claude Code, by Rhussu" width="100%">
+  <img src="assets/banner.png" alt="Rhussu-mods: unofficial mods for Claude Code, by Rhussu" width="100%">
 </p>
 
 <p align="center">
@@ -7,6 +7,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-c084fc" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/Claude%20Code-%E2%89%A5%202.1.314-f472b6" alt="Claude Code 2.1.314 or newer">
   <img src="https://img.shields.io/badge/languages-English%20%C2%B7%20Espa%C3%B1ol-2dd4bf" alt="English and Spanish">
+  <img src="https://img.shields.io/badge/maintained%20by-Claude-c084fc" alt="Maintained by Claude">
   <img src="https://img.shields.io/badge/status-unofficial-5b5b7a" alt="Unofficial">
 </p>
 
@@ -76,12 +77,17 @@ Every change reaches `main` only through a pull request that passes CI:
 
 Found a problem? Please report it privately. See [SECURITY.md](SECURITY.md).
 
-## 💬 Personal collection
+## 🤖 How it's made
 
-These are mods I build for my own setup and share as they are. Ideas and bug reports are welcome in [Issues](https://github.com/Rhussu/claude-mods/issues).
+This collection is **built and maintained by Claude**, Anthropic's AI, working through Claude Code:
+
+- 💡 **Rhussu** comes up with the ideas, tries them out and decides what ships.
+- 🛠️ **Claude** writes the code, the tests, the docs and the images, and publishes every change through a pull request that must pass CI.
+
+These are mods for Rhussu's own setup, shared as they are. Ideas and bug reports are welcome in [Issues](https://github.com/Rhussu/claude-mods/issues).
 
 ## 📄 License
 
 [MIT](LICENSE) © 2026 Rhussu. You can use, change and share these mods, even commercially, as long as you keep the copyright notice and the license.
 
-<sub>Unofficial project. These mods are not made, reviewed or endorsed by Anthropic. "Claude" and "Claude Code" are trademarks of Anthropic.</sub>
+<sub>Unofficial project. These mods are not reviewed or endorsed by Anthropic; being written by Claude doesn't make them an Anthropic product. "Claude" and "Claude Code" are trademarks of Anthropic.</sub>
