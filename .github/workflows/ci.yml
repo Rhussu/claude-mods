@@ -29,10 +29,10 @@ jobs:
       - name: Validate the marketplace
         run: claude plugin validate .
 
-      - name: Validate and test each mod
+      - name: Validate and test each mod and the template
         run: |
           status=0
-          for mod in mods/*/; do
+          for mod in mods/*/ templates/*/; do
             echo "::group::${mod}"
             claude plugin validate "$mod" || status=1
             claude plugin test "$mod" || status=1
@@ -63,7 +63,8 @@ jobs:
             fi
             # Only pull requests are compared with their base.
             [ "${{ github.event_name }}" = "pull_request" ] || continue
-            if git diff --quiet "$BASE" HEAD -- "$dir"; then continue; fi
+            # Only the README and images changed: no new version needed.
+            if git diff --quiet "$BASE" HEAD -- "$dir" ":(exclude)$dir*.md" ":(exclude)${dir}assets"; then continue; fi
             before=$(git show "$BASE:$dir.claude-plugin/plugin.json" 2>/dev/null | jq -r .version || true)
             if [ -n "$before" ] && [ "$before" = "$version" ]; then
               echo "::error::$mod changed but its version is still $version: bump it in plugin.json and marketplace.json"

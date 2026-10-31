@@ -19,6 +19,8 @@
 
 ## ✨ Mods
 
+Each mod has its own page with **how to install it**, what it does, what it uses and how to remove it. 👉 **Click a mod to open it.**
+
 <table>
   <tr>
     <td width="45%"><a href="mods/aurorastate/README.md"><img src="mods/aurorastate/assets/preview.png" alt="aurorastate preview"></a></td>
@@ -33,34 +35,16 @@
         <li>⎇ your <b>git branch</b></li>
       </ul>
       🌐 English &amp; Spanish
+      <br><br>
+      <a href="mods/aurorastate/README.md"><b>→ Install &amp; details</b></a>
     </td>
   </tr>
 </table>
 
-## 🚀 Install
-
-1. Open Claude Code and type:
-
-   ```
-   /plugin install aurorastate --marketplace Rhussu/claude-mods
-   ```
-
-2. Claude Code asks **Add marketplace?** and shows `github:Rhussu/claude-mods`. Check that it is this repository, then answer `y`.
-3. Pick a scope:
-   - **user**: the mod is on in every project;
-   - **project**: only in the current project.
-
-Prefer a shell? `claude plugin install aurorastate --marketplace Rhussu/claude-mods`
-
-| | Command |
-|---|---|
-| 🔄 Update | `claude plugin update aurorastate@rhussu-mods` |
-| 🗑️ Uninstall | `claude plugin uninstall aurorastate@rhussu-mods` |
-
 > [!WARNING]
 > **Before you install any mod, from here or anywhere else:**
 > - A mod runs **inside Claude Code with your user's permissions**. It is code on your machine, just like any other program you install.
-> - Install mods only from **sources you trust**, and read what they do first. Every mod here has a **🔒 Security at a glance** box and a **What it uses** section.
+> - Install mods only from **sources you trust**, and read what they do first. Every mod page here has a **🔒 Security at a glance** box and a **What it uses** section.
 > - Claude Code always asks you to confirm a new marketplace. Make sure the source it shows is the one you expect.
 
 > [!NOTE]
