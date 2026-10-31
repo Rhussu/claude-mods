@@ -1,0 +1,42 @@
+name: Release
+
+# `claude plugin tag mods/<name> --push` creates a tag named <name>--v<version>.
+on:
+  push:
+    tags: ['*--v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish the release with its changelog
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          mod="${TAG%%--v*}"
+          version="${TAG##*--v}"
+          changelog="mods/$mod/CHANGELOG.md"
+          if [ ! -f "$changelog" ]; then
+            echo "::error::$TAG does not match a mod folder (mods/$mod)"
+            exit 1
+          fi
+          # The section from "## [version]" up to the next "## [".
+          awk -v v="$version" '
+            $0 ~ "^## \\[" v "\\]" { on = 1; next }
+            on && /^## \[/ { exit }
+            on { print }
+          ' "$changelog" > notes.md
+          {
+            echo
+            echo '```'
+            echo "/plugin install $mod --marketplace ${{ github.repository }}"
+            echo '```'
+          } >> notes.md
+          gh release create "$TAG" --title "$mod $version" --notes-file notes.md

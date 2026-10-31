@@ -1,0 +1,20 @@
+{
+  "name": "aurorastate",
+  "version": "0.1.0",
+  "description": "A colorful status line above the prompt: Claude's state, context, plan limits, model, effort and git branch",
+  "author": { "name": "Rhussu", "url": "https://github.com/Rhussu" },
+  "license": "MIT",
+  "repository": "https://github.com/Rhussu/claude-mods",
+  "homepage": "https://github.com/Rhussu/claude-mods/tree/main/mods/aurorastate",
+  "keywords": ["status", "statusline", "context", "usage", "theme"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language / Idioma",
+      "description": "auto follows Claude Code's language setting, then $LANG; en = English; es = Español",
+      "default": "auto",
+      "options": ["auto", "en", "es"]
+    }
+  }
+}

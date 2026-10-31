@@ -1,0 +1,15 @@
+{
+  "name": "rhussu-mods",
+  "owner": { "name": "Rhussu", "url": "https://github.com/Rhussu" },
+  "metadata": {
+    "description": "Unofficial mods for Claude Code by Rhussu"
+  },
+  "plugins": [
+    {
+      "name": "aurorastate",
+      "source": "./mods/aurorastate",
+      "description": "A colorful status line above the prompt: Claude's state, context, plan limits, model, effort and git branch",
+      "version": "0.1.0"
+    }
+  ]
+}
